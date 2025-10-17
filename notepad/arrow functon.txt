@@ -1,0 +1,77 @@
+1.const add=()=>{
+console.log("welcome to home")
+}
+add()
+
+2. const Surya=()=>{console.log("welcome to DJs vlogs"," Arya" )}
+Surya()
+
+
+3. const Surya=()=>{console.log("welcome to Viji vlogs","Vikram" )}
+Surya()
+
+4.const division=()=>{
+console.log(" see the division sums")
+}
+division()
+
+
+5.const Full stack=()=>{
+console.log(" full stack is a codeine languages")
+}
+full stack()
+
+6.const Java program=()=>{
+console.log("java is a program languages is a k sensitive")
+}
+Java program()
+
+
+7. const Programming Languages=()=>{
+console.log(" program languages is a must important of computer machine")
+}
+Programming Languages()	
+
+
+8.const cricket score=()=>{
+console.log("cricket score is application used for enter the data ")
+}
+cricket score()	
+
+
+9.const scoreboards=()=>{
+console.log(" score board is a enter store the data in data based")
+}
+scoreboards()											
+
+
+10. const plateaus=()=>{
+console.log("IpL is Indian premier leagued access only India country")
+}
+plateaus()
+
+
+11.const Dominicans=()=>{
+console.log("domain nose is a food delivery work employs worked")
+}
+Dominicans()
+
+12.const amazons=()=>{
+console.log("amazon is a web site used for human beginnings today to day life")
+}
+amazons()
+
+
+
+
+13.const stare bucks=()=>{
+console.log("stare bucks is a most popular coffee stop is world wide")
+}
+stare bucks()
+
+14.const diosma=()=>{
+console.log(" audio and max is a most popular dress stop in India ")
+}
+diosma()
+
+

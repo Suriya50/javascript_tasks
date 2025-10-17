@@ -1,0 +1,45 @@
+ 1.function Biodata() {
+    return "Hello, surya";
+}
+
+console.log(Biodata());
+
+output: Hello, surya
+
+
+2.function Siva_Kumar(a,b){
+ let Siva_Kumar=a+b;
+ resultreturn
+ }
+ console.log(10+90)
+  output=100
+  
+ 3 .function AjithKumar(a,b){
+ let AjithKumar =a-b;
+ result return
+ }
+ console.log(10-10)
+ output=0
+ 
+ 4. function info_corrct(a,b,c,d){
+ let info_corrct=a*b+c+d;
+ resultresult
+ }
+ console.log(10*100+10+10)
+ output=1020
+ 
+ 
+5. function postive_native(name,id,status){
+let postive_native=name+ id +status;
+resultresult
+}
+console.log( "ranjith"+21+"fullstack")
+output=ranjith21fullstack
+
+6 function dra_vid(a,b){
+let dra_vid=a*b;
+resultresult
+}
+console.log(10*10)
+output=100
+
