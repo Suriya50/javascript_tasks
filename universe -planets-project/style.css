@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.universe{
+    background-image: url(images/universe.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 70vh;
+}
+
+.suryaverse{
+    color: aliceblue;
+    font-size: medium;
+    margin: 10px;
+    padding: 5px;
+}
+.types{
+    text-align: center;
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.types a{
+    text-decoration: none;
+    color: rgb(25, 23, 23);
+    margin-top: 20px;
+    gap: 60px;
+font-size: medium;
+    justify-content: space-between;
+    border-radius: 10px;
+    transition: 1.2s;
+    
+    
+}
+
+button{
+    width: 90px;
+    height: 20px;
+    background-color: orange;
+    border-radius: 5px;
+}
+
+.types button :hover{
+transition: 1s;
+color: rgb(252, 250, 247);
+height: 20px;
+width: 90px;
+
+}
+button:hover{
+     width: 120px;
+    height: 30px;
+    transition: 1.2s;
+}
+
+.one{
+    background-image: url(images/one.png);
+    width: 100%;
+    height: 50vh;
+    
+    color: antiquewhite;
+}
+
+.two{
+    background-image: url(images/two.png);
+    width: 100%;
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+background-size: cover;
+color: antiquewhite;
+margin-top: 5px;
+padding: 30px;
+}
+
+.three{
+    background-image: url(images/three.png);
+    width: 100%;
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+background-size: cover;
+color: antiquewhite;
+margin-top: 5px;
+padding: 30px;
+}
+
+.four{
+    background-image: url(images/four.png);
+    width: 100%;
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+background-size: cover;
+color: antiquewhite;
+margin-top: 5px;
+padding: 50px;
+}
