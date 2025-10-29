@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tea</title>
+</head>
+
+<body>
+    <p id="tea"></p>
+    <p id="coffee"></p>
+    <p id="biscuits"></p>
+    <p id="bun"></p>
+    
+    <button style="background-color: blueviolet; color: aliceblue; " id="btn">make tea</button>
+    <button  style="background-color: blueviolet; color: aliceblue;"id="btn1">make cofee</button>
+    <button  style="background-color: blueviolet; color: aliceblue;"id="btn7">biscits</button>
+    <button  style="background-color: blueviolet; color: aliceblue;"id="btn3">bun</button>
+    
+
+
+    <script>
+        const tea = document.getElementById("tea");
+        const cofee = document.getElementById("coffee")
+        const black = document.getElementById("biscuits")
+        const milk = document.getElementById("bun")
+
+
+        btn.addEventListener("click", () => {
+            tea.innerHTML = "tea available in my shop"
+            tea.innerText += "only 12 rupees"
+
+        })
+        btn1.addEventListener("click", () => {
+            cofee.innerHTML = "special cofee available in my shop "
+            cofee.innerText += " only 25 rupees"
+
+        })
+        btn7.addEventListener("click", () => {
+            black.innerHTML = "differnt types of biscuits available in my shop--- "
+black.innerText+="butter biscit,marie biscuit,cream biscuits,salt biscuits,only 10 rupees"
+        })
+        btn3.addEventListener("click", () => {
+            milk.innerHTML = " differnt types of bun available in my shop---- "
+milk.innerText+="butter bun,jam bun,cream bun,chocalate bun,only 25 rupees"
+        })
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
