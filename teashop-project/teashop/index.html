@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom continuue</title>
+</head>
+
+<body>
+
+
+    <div style="background-color: blue; color: antiquewhite; padding: 20px; text-align: center;" id="zero">
+        <h1 id="one">welcome to my caffee shop</h1>
+    </div>
+    <button
+        style="margin-left: 45%; background-color: black;color: aliceblue;height: 50px; width: 120px;margin-top: 20px; border-radius: 8px;"
+        id="two">available products</button>
+
+    <div id="three" style="display: none;">
+        <button style="background-color: rgb(237, 168, 8); color: beige; padding: 5px; width: 40px;"
+            id="tea">tea</button>
+        <button style="background-color: rgb(237, 168, 8); color: beige; padding: 5px; width: 70px;"
+            id="cofee">cofee</button>
+        <button style="background-color: rgb(237, 168, 8); color: beige; padding: 5px; width: 100px;"
+            id="biscuit">biscuits</button>
+        <button style="background-color: rgb(237, 168, 8); color: beige; padding: 5px; width: 50px;"
+            id="bun">bun</button>
+    </div>
+
+    <div>
+        <h1 id="order"></h1>
+        <img style="display: none;" id="image" alt="order">
+    </div>
+
+    <div id="pay" style="margin-top: 30px;">
+        <button id="payment" style="display: none;">payment</button>
+    </div>
+    <h2 id="Amount"></h2>
+
+    <script>
+
+        const prabhu = document.getElementById("zero")
+        const ajith = document.getElementById("two");
+        const vijay = document.getElementById("three")
+        const order = document.getElementById("order")
+        const one = document.getElementById("tea")
+        const two = document.getElementById("cofee")
+        const three = document.getElementById("biscuit")
+        const four = document.getElementById("bun")
+        const img = document.getElementById("image")
+        const payment = document.getElementById("payment")
+        const amount = document.getElementById("Amount")
+
+
+        ajith.addEventListener("click", () => {
+            zero.style.display = "none"
+            vijay.style.display = "block"
+            button.style.display = "none"
+        })
+
+        one.addEventListener("click", () => {
+            order.innerHTML = "Tea order successfully"
+            img.src = "assets/tea.png";
+            img.style.display = "block"
+            payment.style.display = "block"
+            one.style.display = "none"
+            alert("enjoy your drink")
+        })
+        payment.addEventListener("click", () => {
+            amount.innerHTML = "pay 10 rupees"
+        })
+
+        two.addEventListener("click", () => {
+            order.innerHTML = "coffee order successfully"
+            img.src = "assets/cofee.png";
+            img.style.display = "block"
+            payment.style.display = "block"
+            two.style.display = "none"
+            alert("enjoy your drink")
+        })
+        payment.addEventListener("click", () => {
+            amount.innerHTML = "pay 15 rupees"
+        })
+
+        three.addEventListener("click", () => {
+            order.innerHTML = "biscuits order successfully"
+            img.src = "assets/biscuits.png";
+            img.style.display = "block"
+            payment.style.display = "block"
+            three.style.display = "none"
+            alert("enjoy your biscuits")
+        })
+        payment.addEventListener("click", () => {
+            amount.innerHTML = "pay 10 rupees"
+        })
+
+        four.addEventListener("click", () => {
+            order.innerHTML = "bun order successfully"
+            img.src = "assets/bun.png";
+            img.style.display = "block"
+            payment.style.display = "block"
+            four.style.display = "none"
+            alert("enjoy your bunbutter jam")
+        })
+        payment.addEventListener("click", () => {
+            amount.innerHTML = "pay 15 rupees"
+
+        })
+
+
+    </script>
+
+
+</body>
+
+</html>
