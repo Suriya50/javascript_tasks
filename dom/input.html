@@ -3,32 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>input-search</title>
+    <title>HTML</title>
 </head>
 <body>
-    
-<input type="text" id="first" placeholder="search ">
-<button id="btn_1">click</button>
-<p id="result"></p>
-<img  src="" id="gallery" alt="photos" >
-<img src="input-searchbar/images/dhoni.png" alt="">
-<script>
- const btn=document.getElementById("btn_1")
-         btn.addEventListener('click',(e)=>{
-         const img=document.getElementById("gallery")
-         const data=document.getElementById("inputdatas").value
-         const results=document.getElementById("result");
-         results.textContent='your search result:${results}'
-         })
+    <input type="text"  id="inputdatas" placeholder="searchbar">
+    <button id="btn">Generate</button>
+    <p id="result"></p>
+    <img src="" id="images" alt="">
 
-           if(data==="dhonni"){
-            img.src="input-searchbar/images/dhoni.png";
-            result1.textContent="your result dhoni"
-           }else if(data==="virat"){
-          img.src="asset/virat.jpg"
-          result1.textContent="your result is virat"
 
-           }
-</script>
+
+    <script>
+        const btn_1 = document.getElementById("btn")
+
+        btn_1.addEventListener('click',(e)=>{
+            const  datas = document.getElementById("inputdatas").value
+            const images_1 = document.getElementById("images")
+            const result_data = document.getElementById("result")
+            result_data.textContent = "";
+       result_data.textContent = "";
+            images_1.src = ""; 
+
+            if (datas ==="dhoni") {
+                images_1.src = "input-searchbar/images/dhoni.png";
+                result_data.textContent = "Your result is Dhoni";
+            } else if (datas === "virat") {
+                images_1.src = "input-searchbar/images/virat.png";
+                result_data.textContent = "Your result is Virat";
+            }else if (datas === "rohit") {
+                images_1.src = "input-searchbar/images/rohit.png";
+                result_data.textContent = "Your result is rohit";
+            }else if (datas === "hardik") {
+                images_1.src = "input-searchbar/images/hardik.png";
+                result_data.textContent = "Your result is hardik";
+            }else if (datas === "iyer") {
+                images_1.src = "input-searchbar/images/iyer.png";
+                result_data.textContent = "Your result is iyer";
+            }else if (datas === "bumrah") {
+                images_1.src = "input-searchbar/images/bumrah.png";
+                result_data.textContent = "Your result is bumrah";
+            }else if (datas === "ashwin") {
+                images_1.src = "input-searchbar/images/ashwin.png";
+                result_data.textContent = "Your result is ashwin";
+            }else if (datas === "surya") {
+                images_1.src = "input-searchbar/images/surya.png";
+                result_data.textContent = "Your result is surya";
+            }
+
+             })
+    </script>
 </body>
 </html>
