@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>synchoronous</title>
+</head>
+<body>
+
+
+    <script>
+
+      
+
+
+console.log("i am webdeveloper")
+
+setTimeout(() => {
+    console.log("this is setTimeout method");
+}, 4000);
+
+
+setTimeout(() => {
+  console.log("Hello after 2 seconds!");
+}, 2000);
+
+
+setTimeout(() => {
+  console.log("Welcome to JavaScript learning!");
+}, 3000);
+
+
+setTimeout(() => {
+  console.log("First message after 1 second");
+}, 1000);
+
+setTimeout(() => {
+  console.log("Second message after 2 seconds");
+}, 2000);
+
+
+setTimeout(() => {
+  console.log("Random number:", Math.floor(Math.random() * 100));
+}, 1500);
+
+
+function showMessage() {
+  console.log("This message is from a named function!");
+}
+setTimeout(showMessage, 2500);
+
+ 
+
+setInterval(() => {
+  console.log("This runs again and again!");
+}, 2000);
+
+    </script>
+    
+</body>
+</html>

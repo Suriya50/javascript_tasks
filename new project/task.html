@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task</title>
+</head>
+
+<body>
+    <button id="books" style="margin-left: 50%;">Traditional books</button><br><br>
+
+
+
+
+    <center>
+<form style="display: none;" id="form">
+        
+    <h1>registeration form</h1><br><br>
+
+            <label>Enter the book name
+                <input  id="docu"  type="text" placeholder="serach">
+            </label><br><br>
+
+            <label> Enter your Mobile no:
+                <input   id="number" type="number"><br><br>
+
+            </label>
+            <label>Enter the quotes
+                <input id="text"    type="text"><br><br>
+            </label>
+
+            <label>Book name
+                <input  id="string"   type="text"><br><br>
+            </label>
+</form>
+
+        <div   id="enter" style="display:none;">
+            <button >submit</button>
+        </div>
+
+        
+    </center>
+
+
+
+
+
+    <script>
+
+    
+        let btn = document.getElementById("form")
+        let books = document.getElementById("books")
+        let enter = document.getElementById("enter")
+        let runn =document.getElementById("run")
+
+        books.addEventListener("click", () => {
+
+            btn.style.display = "block"
+            enter.style.display = "block"
+            
+enter.addEventListener("click",(e)=>{
+    e.preventDefault();
+btn.style.display="block"
+alert("submitted successfully")
+
+form.reset();
+
+})
+
+           
+
+        })
+
+    
+    
+
+
+    </script>
+
+</body>
+
+</html>

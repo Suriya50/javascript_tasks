@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form handling</title>
+</head>
+<body>
+<h2 style="text-align: center;">registrartion form</h2>
+
+<form id="studentform" style="text-align: center;">
+
+    <input  style="width: 250px; height: 40px; border-radius: 8px; padding: 6px;"   id="name"  type="text" placeholder="Ente the name"><br><br>
+    <input style="width: 250px; height: 40px; border-radius: 8px; padding: 6px;"   id="mail" type="text" placeholder="enter the email"><br><br>
+    <input  style="width: 250px; height: 40px; border-radius: 8px; padding: 6px;"   id="number"  type="number" placeholder="mobile no"><br><br>
+    <input  style="width: 250px; height: 40px; border-radius: 8px; padding: 6px;"   id="books"  type="text" placeholder="favourite books"><br><br>
+
+</form><br><br>
+
+<button  style="width: 130px; height: 40px; border-radius: 8px; padding: 6px; margin-left: 47%; background-color: rgb(162, 5, 5); color: white;"    id="save" >submit</button>
+
+    
+</body>
+
+<script>
+    let students=[];
+
+
+    let namelist=document.getElementById("name")
+    let emaillist=document.getElementById("mail")
+    let numberlist=document.getElementById("number")
+    let booklist=document.getElementById("books")
+    let submitlist=document.getElementById("save")
+
+    submitlist.addEventListener("click",()=>{
+
+let name= namelist.value
+let mail= emaillist.value
+let number= numberlist.value
+let books= booklist.value
+
+
+
+if(name==="" || mail==="" || number==="" || books===""){
+
+alert("please fill the form")
+    return
+}
+
+let student = {
+        name: name,
+        mail: mail,
+        number:number,
+        books:books
+      };
+
+  students.push(student)
+
+  namelist.value=""
+  emaillist.value=""
+  booklist.value=""
+  numberlist.value=""
+
+
+  console.log(students)
+    })
+
+</script>
+</html>

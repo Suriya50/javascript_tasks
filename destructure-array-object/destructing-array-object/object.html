@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>destructring object</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        let object1 = { sports: "cricketer", name: "dhoni", age: "40", team: "chennai" }
+
+        let { sports, name, age, team } = object1
+        console.log(name);
+
+        let car = { brand: "BMW", model: "X5", color: "Black", price: "80L" };
+        let { brand, model, color, price } = car;
+
+        console.log(model);
+
+
+
+        let movie = { title: "Leo", hero: "Vijay", director: "Lokesh", year: 2023 };
+        let { title, hero, director, year } = movie;
+
+        console.log(hero);
+
+
+
+        let developer = { namee: "Arun", lang: "JavaScript", exp: 3, role: "Frontend" };
+        let { namee, lang, exp, role } = developer;
+
+
+        console.log(role);
+
+
+        let player = { name: "Dhoni", playrer: "Captain", teams: "CSK", old: 40 };
+        let { name: playerName, playrer, teams, old } = player;
+
+        console.log(playerName);
+
+
+
+
+    </script>
+</body>
+
+</html>

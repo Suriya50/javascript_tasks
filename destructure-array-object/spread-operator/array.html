@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+
+
+    <script>
+
+
+
+        let array1 = ["java", "python", "js", "c", "c#", "php"]
+        let array2 = ["sql", "oracle", "bootstrap", "tailwind"]
+        let result = [...array1, ...array2]
+        console.log(result);
+
+
+
+        let one = ["vijay", "ajith", "sk", "simbhu"]
+        let two = [...one, "vishal"]
+        console.log(two);
+
+        let three = ["csk", "mi", "rcb", "srh", "kkr"]
+        let four = [...three]
+        console.log(four);
+
+        let five = ["dhoni", "sachin", "rohit", "kohli"]
+        let six = [...five]
+        let [first, ...second] = six
+        console.log(first);
+
+
+        let seven = ["cricket", "kabaddi", "badmition", "volleyball"]
+        let eight = [...seven]
+        let [start, ...end] = eight
+        console.log(end);
+
+
+
+    </script>
+</body>
+
+</html>
