@@ -63,7 +63,7 @@
 
 .card div:hover, .card1 div:hover {
   transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 25px white;
   cursor: pointer;
 }
 
