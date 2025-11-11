@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background-color: black; color: white;">
+    <center>
+        <h2>Register form</h2>
+    </center>
+
+    <div class="form">
+        <center>
+            <form id="myform">
+                <div style="text-align: center; align-items: center; margin-left: 400%; margin-top: 60px;">
+                    <input type="text" placeholder="Enter the name" id="username"><br>
+                    <input type="email" placeholder="Enter your email" id="useremail"><br>
+                    <input type="password" placeholder="password" id="userpass"><br>
+                    <input type="number" placeholder=" Enter your mobile no" id="usernum"><br>
+                    <input type="text" placeholder="anter your address" id="useradd"><br>
+                    <input type="submit">
+
+                </div>
+        </center>
+
+
+        </form>
+
+
+        <script>
+
+            const form = document.getElementById("myform")
+
+            form.addEventListener("submit", (e) => {
+
+                e.preventDefault();
+                const name = document.getElementById("username").value
+                const email = document.getElementById("useremail").value
+                const password = document.getElementById("userpass").value
+                const number = document.getElementById("usernum").value
+                const address = document.getElementById("useradd").value
+
+
+                const user_datas = { username: name, useremail: email, userpassword: password, usernumber: number, useraddress: address }
+
+                const data = localStorage.getItem("inputs")
+
+                const types = JSON.parse(data)
+
+                console.log("datssss", types)
+
+
+                const users = types || []
+
+                console.log('users', users);
+
+
+                users.push(user_datas)
+
+                const changeToJsonString = JSON.stringify(users)
+                const store = localStorage.setItem("inputs", changeToJsonString)
+
+                alert('Datas doen')
+
+
+            })
+
+
+
+
+        </script>
+
+
+
+
+
+    </div>
+
+
+
+</body>
+
+</html>

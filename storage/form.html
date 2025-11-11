@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .form-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        form {
+            background-color: #222;
+            padding: 30px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 0 10px #555;
+        }
+
+        input {
+            width: 90%;
+            padding: 8px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: dodgerblue;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: deepskyblue;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Register Form</h2>
+
+    <div class="form-container">
+        <form id="myform">
+            <input type="text" placeholder="Enter your name" id="username" required><br>
+            <input type="email" placeholder="Enter your email" id="useremail" required><br>
+            <input type="password" placeholder="Enter password" id="userpass" required><br>
+            <input type="number" placeholder="Enter mobile number" id="usernum" required><br>
+            <input type="text" placeholder="Enter your address" id="useradd" required><br>
+            <input type="submit" value="Register">
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById("myform");
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            // Get input values
+            const name = document.getElementById("username").value;
+            const email = document.getElementById("useremail").value;
+            const password = document.getElementById("userpass").value;
+            const number = document.getElementById("usernum").value;
+            const address = document.getElementById("useradd").value;
+
+            // Create object to store
+            const userData = {
+                username: name,
+                useremail: email,
+                userpassword: password,
+                usernumber: number,
+                useraddress: address
+            };
+
+            // Get old data from localStorage
+            const storedData = localStorage.getItem("inputs");
+            const users = storedData ? JSON.parse(storedData) : [];
+
+            // Add new data
+            users.push(userData);
+
+            // Save updated data to localStorage
+            localStorage.setItem("inputs", JSON.stringify(users));
+
+            alert("Data stored successfully!");
+            form.reset();
+        });
+    </script>
+
+</body>
+</html>
