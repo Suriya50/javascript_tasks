@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chennai Job Reports & Survival Guide</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0d6efd;
+            --secondary: #6c757d;
+            --success: #198754;
+            --info: #0dcaf0;
+            --warning: #ffc107;
+            --danger: #dc3545;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --chennai-blue: #1a5276;
+            --chennai-orange: #e67e22;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--chennai-orange) !important;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(26, 82, 118, 0.8), rgba(26, 82, 118, 0.9)), url('https://images.unsplash.com/photo-1592210454259-7d1d4c4c8a34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+        }
+        
+        .job-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 100%;
+        }
+        
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .stats-section {
+            background-color: var(--light);
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--chennai-blue);
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            color: var(--chennai-orange);
+            margin-bottom: 15px;
+        }
+        
+        .footer {
+            background-color: var(--dark);
+            color: white;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        
+        .social-icons a:hover {
+            color: var(--chennai-orange);
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 40px;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--chennai-orange);
+        }
+        
+        .btn-primary {
+            background-color: var(--chennai-blue);
+            border-color: var(--chennai-blue);
+        }
+        
+        .btn-primary:hover {
+            background-color: #144a6d;
+            border-color: #144a6d;
+        }
+        
+        .btn-warning {
+            background-color: var(--chennai-orange);
+            border-color: var(--chennai-orange);
+            color: white;
+        }
+        
+        .btn-warning:hover {
+            background-color: #d35400;
+            border-color: #d35400;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-chart-line me-2"></i>Chennai Job Reports
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Reports</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Job Insights</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Safety Guide</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <button class="btn btn-warning rounded-pill px-4">Login</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Voice of Chennai's Workforce</h1>
+            <p class="lead mb-4">Collecting data to help Chennai residents find the best job opportunities and improve working conditions.</p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <button class="btn btn-warning btn-lg rounded-pill px-4">
+                    <i class="fas fa-microphone me-2"></i>Share Your Experience
+                </button>
+                <button class="btn btn-outline-light btn-lg rounded-pill px-4">
+                    <i class="fas fa-chart-bar me-2"></i>View Reports
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3 col-6 stat-item">
+                    <div class="stat-number">5,000+</div>
+                    <div class="stat-label">Job Reports</div>
+                </div>
+                <div class="col-md-3 col-6 stat-item">
+                    <div class="stat-number">120+</div>
+                    <div class="stat-label">Companies Rated</div>
+                </div>
+                <div class="col-md-3 col-6 stat-item">
+                    <div class="stat-number">85%</div>
+                    <div class="stat-label">Satisfaction Rate</div>
+                </div>
+                <div class="col-md-3 col-6 stat-item">
+                    <div class="stat-number">12</div>
+                    <div class="stat-label">Job Categories</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Categories Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Rate Job Categories</h2>
+            <p class="text-center mb-5">Help others by sharing your experience with different job types in Chennai</p>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card job-card border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon">
+                                <i class="fas fa-motorcycle"></i>
+                            </div>
+                            <h4 class="card-title">Delivery Jobs</h4>
+                            <p class="card-text">Rate delivery platforms like Swiggy, Zomato, Amazon, etc.</p>
+                            <button type="button" class="btn btn-warning rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#ratingModal" data-job-type="Delivery Jobs">
+                                Rate Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card job-card border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <h4 class="card-title">Part-Time Physical Jobs</h4>
+                            <p class="card-text">Rate retail, warehouse, and other physical part-time work.</p>
+                            <button type="button" class="btn btn-warning rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#ratingModal" data-job-type="Part-Time Physical Jobs">
+                                Rate Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card job-card border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon">
+                                <i class="fas fa-laptop"></i>
+                            </div>
+                            <h4 class="card-title">Online & Own Business</h4>
+                            <p class="card-text">Rate freelancing, remote work, and entrepreneurship opportunities.</p>
+                            <button type="button" class="btn btn-warning rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#ratingModal" data-job-type="Online & Own Business">
+                                Rate Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safety Concerns Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2 class="section-title">Safety & Health Concerns</h2>
+                    <p class="mb-4">Report issues like long working hours, inadequate safety measures, or workplace accidents to help improve conditions for everyone.</p>
+                    <div class="mb-4">
+                        <h5><i class="fas fa-check-circle text-success me-2"></i>Anonymous Reporting</h5>
+                        <p class="ms-4">Your identity is protected when reporting concerns.</p>
+                    </div>
+                    <div class="mb-4">
+                        <h5><i class="fas fa-check-circle text-success me-2"></i>Actionable Insights</h5>
+                        <p class="ms-4">We compile reports to advocate for better working conditions.</p>
+                    </div>
+                    <div class="mb-4">
+                        <h5><i class="fas fa-check-circle text-success me-2"></i>Community Support</h5>
+                        <p class="ms-4">Connect with others facing similar challenges.</p>
+                    </div>
+                    <button class="btn btn-primary btn-lg rounded-pill px-4">
+                        <i class="fas fa-shield-alt me-2"></i>Report Safety Issue
+                    </button>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="img-fluid rounded shadow" alt="Workplace Safety">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Reports Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Recent Job Reports</h2>
+            <p class="text-center mb-5">See what others are saying about jobs in Chennai</p>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between mb-3">
+                                <span class="badge bg-warning">Delivery</span>
+                                <small class="text-muted">3 days ago</small>
+                            </div>
+                            <h5 class="card-title">Food Delivery Partner</h5>
+                            <p class="card-text">"Good earning potential but traffic conditions make it risky. Company provides basic safety gear."</p>
+                            <div class="rating mb-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="far fa-star text-warning"></i>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <img src="https://ui-avatars.com/api/?name=Anonymous&background=random" class="rounded-circle me-2" width="30" alt="User">
+                                <small>Anonymous User</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between mb-3">
+                                <span class="badge bg-primary">Retail</span>
+                                <small class="text-muted">1 week ago</small>
+                            </div>
+                            <h5 class="card-title">Store Associate</h5>
+                            <p class="card-text">"Flexible hours but low pay. Management is supportive but opportunities for growth are limited."</p>
+                            <div class="rating mb-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="far fa-star text-warning"></i>
+                                <i class="far fa-star text-warning"></i>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <img src="https://ui-avatars.com/api/?name=User+Two&background=random" class="rounded-circle me-2" width="30" alt="User">
+                                <small>Anonymous User</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between mb-3">
+                                <span class="badge bg-success">Freelance</span>
+                                <small class="text-muted">2 weeks ago</small>
+                            </div>
+                            <h5 class="card-title">Content Writer</h5>
+                            <p class="card-text">"Work from home is convenient but payment delays are common. Need to constantly find new clients."</p>
+                            <div class="rating mb-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star-half-alt text-warning"></i>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <img src="https://ui-avatars.com/api/?name=User+Three&background=random" class="rounded-circle me-2" width="30" alt="User">
+                                <small>Anonymous User</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-outline-primary rounded-pill px-4">View All Reports <i class="fas fa-arrow-right ms-2"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rating Modal -->
+    <div class="modal fade" id="ratingModal" tabindex="-1" aria-labelledby="ratingModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ratingModalLabel">Rate Job Experience</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="ratingForm">
+                        <div class="mb-3">
+                            <label class="form-label">Job Type</label>
+                            <input type="text" class="form-control" id="job-type" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Company (Optional)</label>
+                            <input type="text" class="form-control" placeholder="Enter company name if applicable">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Rating</label>
+                            <div class="rating-input">
+                                <div class="d-flex justify-content-between">
+                                    <span>Poor</span>
+                                    <span>Excellent</span>
+                                </div>
+                                <div class="d-flex justify-content-center my-2">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="rating" id="rating1" value="1">
+                                        <label class="form-check-label" for="rating1">1</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="rating" id="rating2" value="2">
+                                        <label class="form-check-label" for="rating2">2</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="rating" id="rating3" value="3">
+                                        <label class="form-check-label" for="rating3">3</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="rating" id="rating4" value="4">
+                                        <label class="form-check-label" for="rating4">4</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="rating" id="rating5" value="5">
+                                        <label class="form-check-label" for="rating5">5</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Your Experience</label>
+                            <textarea class="form-control" rows="4" placeholder="Share details about pay, working conditions, safety, etc."></textarea>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="anonymous">
+                            <label class="form-check-label" for="anonymous">
+                                Submit anonymously
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-warning">Submit Rating</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="mb-3">
+                        <i class="fas fa-chart-line me-2"></i>Chennai Job Reports
+                    </h5>
+                    <p>Helping Chennai residents make informed decisions about employment opportunities and working conditions.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h5 class="mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Reports</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Job Insights</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Safety Guide</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h5 class="mb-3">Job Categories</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Delivery Jobs</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Retail Jobs</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Freelance Work</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">IT Jobs</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="mb-3">Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <i class="fas fa-envelope me-2"></i>contact@chennaijobreports.com
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-phone me-2"></i>+91 98765 43210
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt me-2"></i>Chennai, Tamil Nadu
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p>&copy; 2023 Chennai Job Reports. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Set job type in modal when rating button is clicked
+        document.addEventListener('DOMContentLoaded', function() {
+            var ratingModal = document.getElementById('ratingModal');
+            ratingModal.addEventListener('show.bs.modal', function(event) {
+                var button = event.relatedTarget;
+                var jobType = button.getAttribute('data-job-type');
+                var modalTitle = ratingModal.querySelector('.modal-title');
+                var jobTypeInput = ratingModal.querySelector('#job-type');
+                
+                modalTitle.textContent = 'Rate ' + jobType;
+                jobTypeInput.value = jobType;
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
