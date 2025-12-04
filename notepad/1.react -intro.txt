@@ -1,0 +1,70 @@
+1.Why react will launch?
+
+React was launched by Facebook (now Meta) in 2013 because they needed a faster, easier, and more efficient way to build user interfaces (UIs) for web applications.
+
+
+complex UI management
+better performance
+reausable components
+declarative approach
+
+2.what is the difference between html using webpage and react usin web page?
+
+
+ Feature                HTML Webpage    	                                                        React Webpage
+
+1. Structure   -       Built with plain HTML, CSS, and JavaScript.	                 |                   Built using JSX (JavaScript + HTML together).
+2. Page Reload - When you change something (like click a link), the whole page reloads.	 |    React uses a Single Page Application (SPA) — it updates only the changed parts, no full reload.  
+3. Performance	-  Slower for large or dynamic websites because it reloads everything.	 |            Faster because it uses Virtual DOM to update only what’s necessary.
+
+
+
+3.what is difference between react and angular?
+
+      
+    type:
+react-react is a library                               |
+angular is a full framework
+
+  developed by:
+react-facebook(meta)
+angular -google
+
+   language used:
+react-javascript
+angular-typescript
+  
+   learning type
+  react-easier to learn,flexible.
+   angular-hard because rules,syntax,structured.
+   
+   binding
+react- one way binding
+angular-two way binding.
+
+
+4.what is typescript?
+  
+ TypeScript (TS) is a programming language developed by Microsoft.
+It is a superset of JavaScript, meaning it adds extra features on top of JavaScript — mainly types.
+
+typescript=javascript+type safety
+
+5.in web development why node is coming?
+
+ Launched: 2009
+
+Creator: Ryan Dahl
+
+ Built for: Running JavaScript on the server-side
+
+ Now used in: APIs, backend servers, real-time apps, full-stack web development
+  
+  Node.js is a runtime environment that lets you run JavaScript on the server side, not just in the browser.
+Normally, JavaScript runs only in browsers (client-side) — but Node.js makes it possible to use JavaScript for backend development too.
+
+6.which one is first comes node,react,angular?
+
+1st-node.js-2009
+2nd-angular-2010
+3rd-react-2013

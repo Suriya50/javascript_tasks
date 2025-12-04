@@ -1,0 +1,43 @@
+1.bootstrap important concept
+
+
+*carousel
+*collapse-like a toggle
+*button
+*breadcrumb
+*cards
+*dropdown
+*modal
+*navbar
+*toaster-sweet alert-alert
+*tooltip
+*background
+*border
+*border radius
+*colors
+*flex
+*shadow
+*sizing
+*height
+*spacing
+*text
+*icons
+*layout
+*awesome
+*form
+
+
+
+today task1
+
+
+1.variable behaviour
+2.object-nested object
+3.array-array of object
+4.dot notation
+
+5.function and it types
+6.array methods
+7.call back function
+8.clousares
+9.file handling

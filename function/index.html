@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function</title>
+</head>
+<body>
+    
+<script>
+
+const greet = () => {
+  console.log("Hello, good morning!");
+};
+
+greet();
+
+const calculate = (a, b) => {
+  const sum = a + b;
+  const multiply = sum * 2;
+  return multiply;
+};
+
+console.log(calculate(2, 3)); 
+
+const numbers = [1, 2, 3];
+
+const doubled = numbers.map(n => n * 2);
+
+console.log(doubled); 
+
+
+const value = (a, b) => {
+  const sum = a + b;
+  const diff = a - b;
+  return { sum, diff };
+};
+
+console.log(value(10, 5));
+
+
+
+
+</script>
+
+</body>
+</html>
